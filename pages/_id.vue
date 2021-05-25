@@ -62,7 +62,7 @@
 								cScreen: $this.isNull($this.screenSize),
 								cOriginalScreen: $this.isNull($this.screenSizeMax),
 								cLanguage: $this.isNull($this.language),
-								cDeviceId: $this.isNull($this.deviceId),
+								cDeviceId: $this.isNull($this.deviceId.visitorId),
 								cOs: $this.isNull($this.$ua.os()),
 							})
 
