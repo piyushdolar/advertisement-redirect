@@ -68,18 +68,14 @@
 
 							// Forwarding request.
 							if (
-								!response.data.data.redirectUrl.match(
-									/^http?:\/\//i
-								) ||
-								!response.data.data.redirectUrl.match(
-									/^https?:\/\//i
-								)
+								response.data.data.redirectUrl.indexOf('http') > -1
 							) {
-								window.location.href = response.data.data.redirectUrl =
+								window.location.href =
+									response.data.data.redirectUrl
+							} else {
+								window.location.href =
 									'http://' + response.data.data.redirectUrl
 							}
-
-							window.location.href = response.data.data.redirectUrl
 						}
 					})
 					.catch(function (error) {
