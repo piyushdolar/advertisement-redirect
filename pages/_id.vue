@@ -67,6 +67,18 @@
 							})
 
 							// Forwarding request.
+							if (
+								!response.data.data.redirectUrl.match(
+									/^http?:\/\//i
+								) ||
+								!response.data.data.redirectUrl.match(
+									/^https?:\/\//i
+								)
+							) {
+								window.location.href = response.data.data.redirectUrl =
+									'http://' + response.data.data.redirectUrl
+							}
+
 							window.location.href = response.data.data.redirectUrl
 						}
 					})
