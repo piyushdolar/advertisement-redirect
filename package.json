@@ -12,7 +12,7 @@
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^3.1.2",
     "@nuxt/content": "^1.14.0",
-    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sentry": "^5.0.3",
     "core-js": "^3.9.1",
