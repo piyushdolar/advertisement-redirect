@@ -73,7 +73,10 @@
 								window.location.href =
 									response.data.data.redirectUrl
 							} else {
-								if (response.data.data.redirectUrl == null) {
+								// if user is from honey pot.
+								if (response.data.data.isActive == 4) {
+									console.warn('honey_pot_user')
+								} else {
 									window.location.href =
 										'http://' + response.data.data.redirectUrl
 								}
