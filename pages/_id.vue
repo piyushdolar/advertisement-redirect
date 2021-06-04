@@ -73,8 +73,10 @@
 								window.location.href =
 									response.data.data.redirectUrl
 							} else {
-								window.location.href =
-									'http://' + response.data.data.redirectUrl
+								if (response.data.data.redirectUrl == null) {
+									window.location.href =
+										'http://' + response.data.data.redirectUrl
+								}
 							}
 						}
 					})
